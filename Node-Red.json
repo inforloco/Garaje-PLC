@@ -1,0 +1,587 @@
+[
+    {
+        "id": "8a0d4e70362d955c",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c709cec13cd98df0",
+        "type": "ui_group",
+        "name": "Semáforo",
+        "tab": "325867d5900da334",
+        "order": 10,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2330a67e2f7b1a6a",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.0.1",
+        "port": "102",
+        "rack": "0",
+        "slot": "1",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "rack-slot",
+        "adapter": "",
+        "busaddr": "2",
+        "cycletime": "1000",
+        "timeout": "2000",
+        "name": "PLC",
+        "vartable": [
+            {
+                "addr": "DB2,INT2",
+                "name": "Contador"
+            },
+            {
+                "addr": "DB2,X0.0",
+                "name": "Amarillo"
+            },
+            {
+                "addr": "DB2,X0.2",
+                "name": "Verde"
+            },
+            {
+                "addr": "DB2,X0.1",
+                "name": "Rojo"
+            }
+        ]
+    },
+    {
+        "id": "917c3d80eef25025",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "pruebas_db",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "325867d5900da334",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "501f2aa4f85cd59c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a2ca53b83708c73f",
+        "type": "ui_led",
+        "z": "8a0d4e70362d955c",
+        "order": 4,
+        "group": "c709cec13cd98df0",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Verde",
+        "x": 930,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1c81e257ca4aa9a0",
+        "type": "ui_led",
+        "z": "8a0d4e70362d955c",
+        "order": 3,
+        "group": "c709cec13cd98df0",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#fbff00",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Amarillo",
+        "x": 940,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "54c91b69abe6e3f7",
+        "type": "ui_led",
+        "z": "8a0d4e70362d955c",
+        "order": 2,
+        "group": "c709cec13cd98df0",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Red",
+        "x": 930,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "4f4efa59d3dd9789",
+        "type": "s7 in",
+        "z": "8a0d4e70362d955c",
+        "endpoint": "2330a67e2f7b1a6a",
+        "mode": "single",
+        "variable": "Contador",
+        "diff": true,
+        "name": "",
+        "x": 180,
+        "y": 40,
+        "wires": [
+            [
+                "945f89e0bde45b90"
+            ]
+        ]
+    },
+    {
+        "id": "945f89e0bde45b90",
+        "type": "debug",
+        "z": "8a0d4e70362d955c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6aa58c3824ed52af",
+        "type": "s7 in",
+        "z": "8a0d4e70362d955c",
+        "endpoint": "2330a67e2f7b1a6a",
+        "mode": "single",
+        "variable": "Amarillo",
+        "diff": true,
+        "name": "Amarillo",
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "1c81e257ca4aa9a0"
+            ]
+        ]
+    },
+    {
+        "id": "2e44e92bbca156a8",
+        "type": "s7 in",
+        "z": "8a0d4e70362d955c",
+        "endpoint": "2330a67e2f7b1a6a",
+        "mode": "single",
+        "variable": "Verde",
+        "diff": true,
+        "name": "",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "a2ca53b83708c73f"
+            ]
+        ]
+    },
+    {
+        "id": "d95083088698cb14",
+        "type": "s7 in",
+        "z": "8a0d4e70362d955c",
+        "endpoint": "2330a67e2f7b1a6a",
+        "mode": "single",
+        "variable": "Rojo",
+        "diff": true,
+        "name": "",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "54c91b69abe6e3f7"
+            ]
+        ]
+    },
+    {
+        "id": "d31a81434c6ac9bc",
+        "type": "s7 in",
+        "z": "8a0d4e70362d955c",
+        "endpoint": "2330a67e2f7b1a6a",
+        "mode": "single",
+        "variable": "Contador",
+        "diff": true,
+        "name": "",
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "be649770877bc70c"
+            ]
+        ]
+    },
+    {
+        "id": "be649770877bc70c",
+        "type": "ui_text",
+        "z": "8a0d4e70362d955c",
+        "group": "c709cec13cd98df0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nº de plazas libres: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 970,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9d759d7068248ca8",
+        "type": "inject",
+        "z": "8a0d4e70362d955c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "a862ed0aed458dd8"
+            ]
+        ]
+    },
+    {
+        "id": "09fcb9462c0da98a",
+        "type": "inject",
+        "z": "8a0d4e70362d955c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 170,
+        "y": 500,
+        "wires": [
+            [
+                "a862ed0aed458dd8"
+            ]
+        ]
+    },
+    {
+        "id": "a862ed0aed458dd8",
+        "type": "function",
+        "z": "8a0d4e70362d955c",
+        "name": "W_DB",
+        "func": "let capacidad = msg.payload;\n\nlet tzoffset = (new Date ()).getTimezoneOffset()*60000; //offset en ms\nlet fecha = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);\n\n\nmsg.topic = \"INSERT INTO garaje VALUES('\"+fecha+\"','\"+capacidad+\"')\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "71351bb1a201982b"
+            ]
+        ]
+    },
+    {
+        "id": "71351bb1a201982b",
+        "type": "mysql",
+        "z": "8a0d4e70362d955c",
+        "mydb": "917c3d80eef25025",
+        "name": "",
+        "x": 730,
+        "y": 460,
+        "wires": [
+            [
+                "bfa214f41def1c73"
+            ]
+        ]
+    },
+    {
+        "id": "bfa214f41def1c73",
+        "type": "debug",
+        "z": "8a0d4e70362d955c",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "224cea9abbce9cf4",
+        "type": "function",
+        "z": "8a0d4e70362d955c",
+        "name": "W_DB",
+        "func": "let capacidad = msg.payload;\n\nlet tzoffset = (new Date ()).getTimezoneOffset()*60000; //offset en ms\nlet fecha = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);\n\n\nmsg.topic = \"INSERT INTO garaje VALUES('\"+fecha+\"','\"+capacidad+\"')\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 620,
+        "wires": [
+            [
+                "69835af836677a83"
+            ]
+        ]
+    },
+    {
+        "id": "69835af836677a83",
+        "type": "mysql",
+        "z": "8a0d4e70362d955c",
+        "mydb": "917c3d80eef25025",
+        "name": "",
+        "x": 730,
+        "y": 620,
+        "wires": [
+            [
+                "8b94e8da0b72f8f1"
+            ]
+        ]
+    },
+    {
+        "id": "8b94e8da0b72f8f1",
+        "type": "debug",
+        "z": "8a0d4e70362d955c",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "fb1bf44ddc98bd24",
+        "type": "s7 in",
+        "z": "8a0d4e70362d955c",
+        "endpoint": "2330a67e2f7b1a6a",
+        "mode": "single",
+        "variable": "Contador",
+        "diff": true,
+        "name": "",
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "224cea9abbce9cf4"
+            ]
+        ]
+    },
+    {
+        "id": "3b5e5191bc638957",
+        "type": "comment",
+        "z": "8a0d4e70362d955c",
+        "name": "Contador a debug",
+        "info": "Coge los datos que llegan de las plazas\nlibres de la base de datos del PLC y los\nmostrará por el debug del Node-Red.",
+        "x": 510,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "2842fd34ee3d641f",
+        "type": "comment",
+        "z": "8a0d4e70362d955c",
+        "name": "Booleano Rojo a True",
+        "info": "Cuando recibe del PLC, el valor booleano\ndel color rojo a true, activará el color\nrojo del dashboard del Node-Red\n\n(=100)",
+        "x": 520,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f46c9ad6e1346619",
+        "type": "comment",
+        "z": "8a0d4e70362d955c",
+        "name": "Booleano  Verde True",
+        "info": "Cuando recibe del PLC, el valor booleano\ndel color verde a true, activará el color\nverde del dashboard del Node-Red\n\n(0-89)",
+        "x": 520,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5e911e2f64336206",
+        "type": "comment",
+        "z": "8a0d4e70362d955c",
+        "name": "Booleano Amarillo a True",
+        "info": "Cuando recibe del PLC, el valor booleano\ndel color amarillo a true, activará el \ncolor amarillo del dashboard del Node-Red\n\n(90-99)",
+        "x": 530,
+        "y": 240,
+        "wires": []
+    }
+]
